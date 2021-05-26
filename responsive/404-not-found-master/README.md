@@ -44,6 +44,7 @@ For this page, I tried experimenting with responsive grid layouts and text units
 
 - HTML
 - CSS
+- CSS Grid
 
 ## Features
 
