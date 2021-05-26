@@ -34,7 +34,9 @@
 
 ## Overview
 
-![screenshot](screenshot.png)
+|                Desktop Version                |               Mobile Version                |
+| :-------------------------------------------: | :-----------------------------------------: |
+| ![desktop screenshot](screenshot-desktop.png) | ![mobile screenshot](screenshot-mobile.png) |
 
 For this page, I tried experimenting with responsive grid layouts and text units by limiting my use of media queries. I used `auto-fil` and the CSS `minmax()` function to automatically shrink and grow the grid column. For the font sizes, I decided to use the `clamp()` function along with different text units since the sizes from the desktop to mobile version vary so much.
 
