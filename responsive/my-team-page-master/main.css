@@ -1,0 +1,131 @@
+/*---------------------- HTML, ALL, BODY STYLES ----------------------*/
+:root {
+  --black: #000000;
+  --light-gray: #bdbdbd;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  font-size: 1.125rem, 16px;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  color: var(--black);
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/* text styles */
+h1 {
+  font-family: "PT Serif", serif;
+}
+
+h1 {
+  font-size: clamp(2.25rem, 3vw, 36px);
+  line-height: 47.7px;
+}
+
+h2,
+p {
+  font-size: 18px;
+  line-height: 27px;
+}
+@media (min-width: 900px) {
+  p {
+    margin-right: 6em;
+  }
+}
+
+/* img styles */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* genetic class text styles */
+.text-center {
+  text-align: center;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+/* main styles */
+main {
+  margin: 5.5em auto;
+}
+
+/*---------------------- LAYOUT STYLES ----------------------*/
+/* flex styles */
+.flex {
+  display: flex;
+}
+
+/* grid styles */
+.grid {
+  display: grid;
+}
+
+/*---------------------- DISPLAY STYLES ----------------------*/
+.container {
+  padding: 2.5em 1.5em;
+}
+
+.wrapper-900 {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+/*---------------------- COMPONENTS STYLES ----------------------*/
+/* profile styles */
+/* .profile {
+
+} */
+
+.profile-title {
+  font-family: "PT Serif", serif;
+  font-size: 12px;
+}
+
+.profile-name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* credit styles */
+.credits p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--light-gray);
+}
+
+.credits a:link,
+.credits a:visited {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: var(--light-gray);
+}
+
+.credits a:hover,
+.credits a:active {
+  text-decoration: none;
+}
