@@ -10,86 +10,59 @@
 
     <link rel="icon" href="devchallenges.png" />
 
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="https://devchallenges.io/"
+      href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
     />
-
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap"
       rel="stylesheet"
     />
 
-    <title>Devchallenges</title>
+    <link rel="stylesheet" href="main.css" />
 
-    <style>
-      body {
-        font-family: "Poppins", sans-serif;
-      }
-
-      ul {
-        padding-left: 24px;
-      }
-
-      li {
-        margin-bottom: 8px;
-      }
-
-      .welcome {
-        max-width: 800px;
-        margin: 0 auto;
-      }
-
-      .welcome-text {
-        margin-top: 30vh;
-        font-weight: 500;
-      }
-
-      .welcome-text p {
-        font-size: 1rem;
-        font-weight: 400;
-      }
-
-      .welcome-text h1 {
-        font-size: 1.5rem;
-      }
-
-      .welcome-text a {
-        color: #f7542e;
-      }
-    </style>
+    <title>Team Page | Devchallenges</title>
   </head>
   <body>
-    <div class="welcome">
-      <div class="welcome-text">
-        <h1>
-          Welcome to
-          <a href="https://devchallenges.io/" target="_blank"
-            >devchallenges.io</a
-          >
-        </h1>
+    <div class="container wrapper-900">
+      <header class="flex">
+        <h1>The creative crew</h1>
 
-        <p>
-          If you have any questions, don't hesitate to ask on Discord. Here are
-          7 general steps to complete the challenge:
-        </p>
-      </div>
+        <div class="description">
+          <h2 class="text-uppercase">Who We Are</h2>
+          <p>
+            We are team of creatively diverse, driven, innovative individuals
+            working in various locations from the world.
+          </p>
+        </div>
+      </header>
 
-      <ul>
-        <li><b>Step 1:</b> Create a new repository on github</li>
-        <li><b>Step 2:</b> Copy resources, README.md to your repository</li>
-        <li>
-          <b>Step 3:</b> Login to Figma to checkout font, color, spacing,..
-        </li>
-        <li><b>Step 4:</b> Complete all user stories</li>
-        <li><b>Step 5:</b> Update README.md</li>
-        <li><b>Step 6:</b> Deploy your app and submit your solution</li>
-        <li>
-          <b>Step 7:</b> Share your solution on Discord, Twitter and other
-          platforms to ask for feedback
-        </li>
-      </ul>
+      <main>
+        <section class="grid">
+          <div class="profile">
+            <div class="profile-img">
+              <img src="img/photo1.png" alt="Product owner" />
+            </div>
+            <div class="profile-title">
+              <p>Product Owner</p>
+            </div>
+            <div class="profile-name">
+              <p>Bill Mahoney</p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="credits text-center">
+          <p>
+            Created by
+            <a href="https://devchallenges.io/portfolio/JMixson">JMixson</a> -
+            devChallenges.io
+          </p>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
