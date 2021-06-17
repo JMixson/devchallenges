@@ -13,6 +13,7 @@ html {
 html,
 body {
   margin: 0;
+  padding: 0;
 }
 
 body {
@@ -20,8 +21,6 @@ body {
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
   color: var(--black);
-  -webkit-backface-visibility: visible;
-  backface-visibility: visible;
 }
 
 *,
@@ -44,13 +43,8 @@ h1 {
 
 h2,
 p {
-  font-size: 18px;
+  font-size: clamp(14px, 18px, 18px);
   line-height: 27px;
-}
-@media (min-width: 900px) {
-  p {
-    margin-right: 6em;
-  }
 }
 
 /* img styles */
@@ -70,23 +64,27 @@ img {
 
 /* main styles */
 main {
-  margin: 5.5em auto;
+  margin: 5.5em 0;
 }
 
 /*---------------------- LAYOUT STYLES ----------------------*/
 /* flex styles */
 .flex {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 /* grid styles */
 .grid {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2em;
 }
 
 /*---------------------- DISPLAY STYLES ----------------------*/
 .container {
-  padding: 2.5em 1.5em;
+  padding: 2.5em 2em;
 }
 
 .wrapper-900 {
@@ -96,13 +94,38 @@ main {
 
 /*---------------------- COMPONENTS STYLES ----------------------*/
 /* profile styles */
-/* .profile {
+.flex .profile:nth-child(even) {
+  margin-top: 4em;
+}
+@media (min-width: 650px) {
+  .flex .profile:nth-child(even) {
+    margin-top: 0;
+  }
+  .flex .profile:nth-child(3n - 1) {
+    margin-top: 6em;
+  }
+}
 
-} */
+.profile {
+  width: 35%;
+  position: relative;
+}
+@media (min-width: 650px) {
+  .profile {
+    width: 28%;
+  }
+}
 
 .profile-title {
   font-family: "PT Serif", serif;
   font-size: 12px;
+  text-transform: uppercase;
+  display: inline-block;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  position: absolute;
+  top: 0;
+  left: 92%;
 }
 
 .profile-name {
