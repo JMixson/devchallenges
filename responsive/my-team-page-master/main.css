@@ -34,17 +34,14 @@ body {
 /* text styles */
 h1 {
   font-family: "PT Serif", serif;
-}
-
-h1 {
-  font-size: clamp(2.25rem, 3vw, 36px);
-  line-height: 47.7px;
+  font-size: clamp(2.25rem, 3vw, 2rem);
+  line-height: 2.981rem;
 }
 
 h2,
 p {
-  font-size: clamp(14px, 18px, 18px);
-  line-height: 27px;
+  font-size: clamp(0.9rem, 1.1rem, 1.1rem);
+  line-height: 1.688rem;
 }
 
 /* img styles */
@@ -79,7 +76,7 @@ main {
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2em;
+  column-gap: 2em;
 }
 
 /*---------------------- DISPLAY STYLES ----------------------*/
@@ -118,7 +115,7 @@ main {
 
 .profile-title {
   font-family: "PT Serif", serif;
-  font-size: 12px;
+  font-size: 0.8rem;
   text-transform: uppercase;
   display: inline-block;
   writing-mode: vertical-rl;
@@ -129,7 +126,7 @@ main {
 }
 
 .profile-name {
-  font-size: 18px;
+  font-size: 1.1rem;
   font-weight: 600;
 }
 
