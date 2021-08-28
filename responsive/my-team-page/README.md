@@ -61,4 +61,4 @@ This application/site was created as a submission to a [DevChallenges](https://d
 ## Contact
 
 - Website [jasminemixson.com](https://jasminemixson.com)
-- GitHub [@Jmixson](https://github.com/jmixson})
+- GitHub [@JMixson](https://github.com/jmixson})
