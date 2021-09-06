@@ -1,0 +1,224 @@
+/*---------------------- VARIABLES ----------------------*/
+/* colors */
+$main-color: #f2994a;
+$dark-gray-color: #333333;
+$gray-color: #4F4F4F;
+$light-gray-color: #bdbdbd;
+$black-color: #000000;
+$white-color: #ffffff;
+
+/* fonts */
+$main-font-family: "Montserrat", sans-serif;
+$special-font-family: "Playfair Display", serif;
+
+/* base sizes */
+$base-font-size: minmax(1rem, 1rem);
+
+/*---------------------- MIXINS ----------------------*/
+/* media query mixin */
+@mixin breakpoint($class) {
+  @if $class == xsm {
+    @media (max-width: 600px) {
+      @content;
+    }
+  } @else if $class == sm {
+    @media (min-width: 600px) {
+      @content;
+    }
+  } @else if $class == md {
+    @media (min-width: 750px) {
+      @content;
+    }
+  } @else if $class == lg {
+    @media (min-width: 950px) {
+      @content;
+    }
+  } @else if $class == xlg {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else if $class == xxlg {
+    @media (min-width: 1800px) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint mixin supports: xsm, sm, md, lg, xlg, xxlg";
+  }
+}
+
+/*---------------------- HTML, ALL, BODY STYLES ----------------------*/
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  font-size: $base-font-size;
+  font-family: $main-font-family;
+  overflow-x: hidden;
+  color: $dark-gray-color;
+  line-height: 1.75;
+  padding: 1em;
+}
+
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/* text styles */
+h1,
+h2 {
+  font-family: $special-font-family;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: minmax(1.5rem, 3rem);
+}
+
+h2 {
+  font-size: minmax(1.1rem, 1.5rem);
+}
+
+/* genetic class text styles */
+.text-center {
+  text-align: center;
+}
+
+/* image styles */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* link styles */
+%link-hover {
+  font-style: italic;
+}
+
+a {
+  &:link,
+  &:visited {
+    text-decoration: none;
+  }
+
+  &:hover,
+  &:active {
+    @extend %link-hover;
+  }
+}
+
+.active {
+  @extend %link-hover;
+}
+
+/* button styles */
+button {
+  background-color: transparent;
+  border: none;
+}
+
+/* main styles */
+main {
+  @include breakpoint(sm) {
+    margin: 2em 0;
+  }
+}
+
+/*---------------------- LAYOUT ----------------------*/
+/* display styles */
+.d-none {
+  display: none !important;
+}
+
+.d-mobile-none {
+  @include breakpoint(xsm) {
+    display: none !important;
+  }
+}
+
+.d-tablet-none {
+  @include breakpoint(sm) {
+    display: none !important;
+  }
+}
+
+.d-block {
+  display: block !important;
+}
+
+/* wrapper styles */
+.wrapper-1200 {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.wrapper-30-ch {
+  max-width: 30ch;
+}
+
+/* position styles */
+.p-relative {
+  position: relative;
+}
+
+/* flex styles */
+.flex {
+  display: flex;
+  gap: 1em;
+}
+
+.mobile-column {
+  flex-direction: column;
+
+  @include breakpoint(sm) {
+    flex-direction: row;
+  }
+}
+
+/* grid styles */
+.grid {
+  display: grid;
+  grid-gap: 1em;
+}
+
+.col-1 {
+  grid-template-columns: 1fr;
+}
+
+.col-2 {
+  @extend .col-1;
+
+  @include breakpoint(sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/*---------------------- COMPONENTS ----------------------*/
+
+/* credit styles */
+.credits p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--light-gray);
+}
+
+.credits a:link,
+.credits a:visited {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: var(--light-gray);
+}
+
+.credits a:hover,
+.credits a:active {
+  text-decoration: none;
+}
