@@ -1,5 +1,3 @@
-<!-- Please update value in the {}  -->
-
 <h1 align="center">Interior Consultant</h1>
 
 <div align="center">
@@ -12,7 +10,7 @@
       Demo
     </a>
     <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
+    <a href="https://devchallenges.io/solutions/7gDdig5zWG4bXHHdaVUl">
       Solution
     </a>
     <span> | </span>
