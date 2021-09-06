@@ -1,0 +1,115 @@
+/*---------------------- HTML, ALL, BODY STYLES ----------------------*/
+:root {
+  /* colors */
+  --black: #000000;
+  --white: #ffffff;
+
+  /* fonts */
+  --font-size: 1.15em;
+  --main-font-family: arial;
+  --second-font-family: arial;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: var(--font-size, 16px);
+  font-family: var(--main-font-family, sans-serif);
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/* text styles */
+h1,
+.h1 {
+  font-size: calc(var(--base-font) * 1.5);
+}
+
+h2,
+.h2 {
+  font-size: calc(var(--base-font) * 1.25);
+}
+
+h3,
+.h3 {
+  font-size: calc(var(--base-font) * 1.15);
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+  font-family: var(--second-font-family, sans-serif);
+}
+
+p {
+  font-size: var(--base-font);
+}
+
+/* img styles */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* genetic class text styles */
+.text-center {
+  text-align: center;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+/* footer styles */
+footer {
+  margin-top: 1em;
+}
+
+/*---------------------- DISPLAY STYLES ----------------------*/
+.container {
+  padding: 1em;
+}
+
+.wrapper-900 {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/*---------------------- COMPONENTS STYLES ----------------------*/
+/* attribution styles */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

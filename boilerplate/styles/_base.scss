@@ -1,0 +1,125 @@
+/*---------------------- VARIABLES ----------------------*/
+/* colors */
+$dark-blue: hsl(233, 26%, 24%);
+$green: hsl(136, 65%, 51%);
+$cyan: hsl(192, 70%, 51%);
+$grayish-blue: hsl(233, 8%, 62%);
+$light-grayish-blue: hsl(220, 16%, 96%);
+$light-gray: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
+
+/* fonts */
+$main-font-family: "Public Sans", sans-serif;
+
+/* base sizes */
+$base-font-size: 1.125rem;
+
+/*---------------------- HTML, ALL, BODY STYLES ----------------------*/
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: $base-font-size;
+  font-family: $main-font-family;
+  color: $grayish-blue;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/* text styles */
+h1,
+h2,
+h3 {
+  font-weight: 300;
+  color: $dark-blue;
+}
+
+h1 {
+  font-size: calc(#{$base-font-size} * 1.5);
+}
+
+h2 {
+  font-size: calc(#{$base-font-size} * 1.25);
+}
+
+h3 {
+  font-size: calc(#{$base-font-size} * 1.15);
+}
+
+h4 {
+  font-size: calc(#{$base-font-size} * 0.75);
+}
+
+/* genetic class text styles */
+.text {
+  //text-transform
+  @include transform-modifiers;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.text {
+  //text-weight
+  @include weight-modifiers;
+}
+
+.text {
+  //text-align
+  @include align-modifiers;
+}
+
+/*---------------------- COLORS ----------------------*/
+.text {
+  @include color-modifiers;
+}
+
+.bg {
+  @include color-modifiers($attribute: "background");
+}
+
+/*---------------------- GENERAL STYLES ----------------------*/
+/* link styles */
+a {
+  &:link,
+  &:visited {
+    display: inline-block;
+    text-decoration: none;
+    color: $dark-blue;
+
+    @include transition-300;
+  }
+
+  &:hover,
+  &:active {
+    color: $green;
+  }
+}
+
+/* image styles */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* footer styles */
+footer {
+  margin-top: 1em;
+}
