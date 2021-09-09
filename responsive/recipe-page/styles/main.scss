@@ -105,18 +105,12 @@ img {
 
 a {
   &:link,
-  &:visited {
-    text-decoration: none;
-  }
-
+  &:visited,
   &:hover,
   &:active {
-    @extend %link-hover;
+    text-decoration: none;
+    font-style: italic;
   }
-}
-
-.active {
-  @extend %link-hover;
 }
 
 /* button styles */

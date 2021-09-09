@@ -57,12 +57,9 @@ img {
 }
 
 /* link styles */
-a:hover, a:active, .active {
-  font-style: italic;
-}
-
-a:link, a:visited {
+a:link, a:visited, a:hover, a:active {
   text-decoration: none;
+  font-style: italic;
 }
 
 /* button styles */
