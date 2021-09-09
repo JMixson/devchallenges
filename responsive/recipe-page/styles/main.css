@@ -169,20 +169,47 @@ main {
   }
 }
 
+/*---------------------- FORMS ----------------------*/
+fieldset {
+  border: none;
+  margin: 1.5em 0;
+  padding: 0;
+}
+
+legend {
+  font-size: minmax(1rem, 1.1rem);
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  margin: 1em 0;
+}
+
 /*---------------------- COMPONENTS ----------------------*/
+/* description styles */
+.description {
+  font-size: minmax(0.8rem, 0.9rem);
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* source styles */
+.source,
+.source a:link {
+  color: #bdbdbd;
+}
+
 /* credit styles */
 .credits p {
   font-family: "Montserrat", sans-serif;
   font-size: 0.75rem;
   font-weight: 500;
-  color: var(--light-gray);
+  color: #4f4f4f;
 }
 
 .credits a:link,
 .credits a:visited {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  color: var(--light-gray);
+  color: #4f4f4f;
 }
 
 .credits a:hover,
