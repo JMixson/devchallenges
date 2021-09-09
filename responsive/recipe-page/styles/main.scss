@@ -2,7 +2,7 @@
 /* colors */
 $main-color: #f2994a;
 $dark-gray-color: #333333;
-$gray-color: #4F4F4F;
+$gray-color: #4f4f4f;
 $light-gray-color: #bdbdbd;
 $black-color: #000000;
 $white-color: #ffffff;
@@ -125,11 +125,19 @@ button {
   border: none;
 }
 
+/* aside styles */
+aside {
+  display: flex;
+  max-width: 300px;
+
+  @include breakpoint(sm) {
+    flex-direction: column;
+  }
+}
+
 /* main styles */
 main {
-  @include breakpoint(sm) {
-    margin: 2em 0;
-  }
+  max-width: 900px;
 }
 
 /*---------------------- LAYOUT ----------------------*/
@@ -158,10 +166,6 @@ main {
 .wrapper-1200 {
   max-width: 1200px;
   margin: 0 auto;
-}
-
-.wrapper-30-ch {
-  max-width: 30ch;
 }
 
 /* position styles */

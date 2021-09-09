@@ -71,11 +71,26 @@ button {
   border: none;
 }
 
-/* main styles */
+/* aside styles */
+aside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 300px;
+}
+
 @media (min-width: 600px) {
-  main {
-    margin: 2em 0;
+  aside {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
+}
+
+/* main styles */
+main {
+  max-width: 900px;
 }
 
 /*---------------------- LAYOUT ----------------------*/
@@ -104,10 +119,6 @@ button {
 .wrapper-1200 {
   max-width: 1200px;
   margin: 0 auto;
-}
-
-.wrapper-30-ch {
-  max-width: 30ch;
 }
 
 /* position styles */
