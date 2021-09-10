@@ -173,11 +173,24 @@ fieldset {
   padding: 0;
 }
 
+fieldset div {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40px 1fr;
+      grid-template-columns: 40px 1fr;
+}
+
 legend {
   font-size: minmax(1rem, 1.1rem);
   font-family: "Playfair Display", serif;
   font-style: italic;
   margin: 1em 0;
+}
+
+input[type="checkbox"] {
+  width: 21px;
+  height: 21px;
+  accent-color: #f2994a;
 }
 
 /*---------------------- COMPONENTS ----------------------*/

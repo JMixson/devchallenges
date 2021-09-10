@@ -99,10 +99,6 @@ img {
 }
 
 /* link styles */
-%link-hover {
-  font-style: italic;
-}
-
 a {
   &:link,
   &:visited,
@@ -204,6 +200,11 @@ fieldset {
   border: none;
   margin: 1.5em 0;
   padding: 0;
+
+  div {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+  }
 }
 
 legend {
@@ -211,6 +212,12 @@ legend {
   font-family: $special-font-family;
   font-style: italic;
   margin: 1em 0;
+}
+
+input[type="checkbox"] {
+  width: 21px;
+  height: 21px;
+  accent-color: $main-color;
 }
 
 /*---------------------- COMPONENTS ----------------------*/
