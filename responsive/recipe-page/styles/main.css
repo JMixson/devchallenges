@@ -46,6 +46,10 @@ h2 {
 }
 
 /* genetic class text styles */
+.text-main {
+  color: #f2994a;
+}
+
 .text-center {
   text-align: center;
 }
@@ -70,19 +74,32 @@ button {
 
 /* aside styles */
 aside {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 300px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 500;
 }
 
 @media (min-width: 600px) {
   aside {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    max-width: 216px;
+    padding: 1.5em 1em;
+    -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
   }
+}
+
+aside div:first-child {
+  grid-column: span 3;
 }
 
 /* main styles */
