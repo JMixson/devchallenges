@@ -96,6 +96,14 @@ h2 {
   text-align: center;
 }
 
+.small {
+  color: $light-gray-color;
+  font-weight: 700;
+  // font-size: minmax(0.5rem, 0.6rem);
+  font-size: 0.5rem;
+  text-transform: uppercase;
+}
+
 /* image styles */
 img {
   max-width: 100%;
@@ -123,20 +131,29 @@ button {
 aside {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1em;
   justify-content: center;
   align-items: center;
   font-weight: 500;
+  font-size: clamp(0.6rem, 0.7rem, 0.9rem);
+  margin-top: 1.25em;
 
   @include breakpoint(sm) {
+    grid-template-columns: 1fr;
     max-width: 216px;
     padding: 1.5em 1em;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
   }
 
-  div:first-child {
-    grid-column: span 3;
+  & > div {
+    display: flex;
+    gap: 0.75em;
+  }
+
+  & > div:first-child {
+    @include breakpoint(xsm) {
+      grid-column: span 3;
+    }
   }
 }
 

@@ -54,6 +54,13 @@ h2 {
   text-align: center;
 }
 
+.small {
+  color: #bdbdbd;
+  font-weight: 700;
+  font-size: 0.5rem;
+  text-transform: uppercase;
+}
+
 /* image styles */
 img {
   max-width: 100%;
@@ -78,7 +85,6 @@ aside {
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
-  gap: 1em;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -86,10 +92,14 @@ aside {
       -ms-flex-align: center;
           align-items: center;
   font-weight: 500;
+  font-size: clamp(0.6rem, 0.7rem, 0.9rem);
+  margin-top: 1.25em;
 }
 
 @media (min-width: 600px) {
   aside {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
     max-width: 216px;
     padding: 1.5em 1em;
     -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
@@ -98,8 +108,17 @@ aside {
   }
 }
 
-aside div:first-child {
-  grid-column: span 3;
+aside > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.75em;
+}
+
+@media (max-width: 600px) {
+  aside > div:first-child {
+    grid-column: span 3;
+  }
 }
 
 /* main styles */
