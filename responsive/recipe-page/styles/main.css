@@ -232,9 +232,48 @@ input[type="checkbox"] {
 /*---------------------- COMPONENTS ----------------------*/
 /* description styles */
 .description {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20px 1fr;
+      grid-template-columns: 20px 1fr;
   font-size: minmax(0.8rem, 0.9rem);
   font-style: italic;
   font-weight: 500;
+}
+
+.description img {
+  margin-top: 5px;
+}
+
+.description p {
+  margin-top: 0;
+  line-height: 1.25rem;
+}
+
+.instructions > div {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50px 1fr;
+      grid-template-columns: 50px 1fr;
+}
+
+.instructions p {
+  margin-top: 0;
+  line-height: 1.219rem;
+}
+
+.instructions .counter {
+  width: 36px;
+  height: 36px;
+  background-color: #f2994a;
+  color: #ffffff;
+  padding: 0.05em;
+  border-radius: 6px;
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.75rem;
 }
 
 /* source styles */
