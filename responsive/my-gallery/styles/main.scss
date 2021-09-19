@@ -1,0 +1,229 @@
+/*---------------------- VARIABLES ----------------------*/
+/* colors */
+$main-color: #4e5150;
+$gray-color: #a9a9a9;
+$light-gray-color: #e5e5e5;
+$white-color: #ffffff;
+$credits-color: #b9bdcf;
+
+/* fonts */
+$main-font-family: "Montserrat", sans-serif;
+
+/* base sizes */
+$base-font-size: clamp(0.9rem, 1rem, 1.5rem);
+
+/* border-radius size */
+$radius: 12px;
+
+/*---------------------- MIXINS ----------------------*/
+/* media query mixin */
+@mixin breakpoint($class) {
+  @if $class == xsm {
+    @media (max-width: 600px) {
+      @content;
+    }
+  } @else if $class == sm {
+    @media (min-width: 600px) {
+      @content;
+    }
+  } @else if $class == md {
+    @media (min-width: 750px) {
+      @content;
+    }
+  } @else if $class == lg {
+    @media (min-width: 950px) {
+      @content;
+    }
+  } @else if $class == xlg {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else if $class == xxlg {
+    @media (min-width: 1800px) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint mixin supports: xsm, sm, md, lg, xlg, xxlg";
+  }
+}
+
+/*---------------------- HTML, ALL, BODY STYLES ----------------------*/
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  font-family: $main-font-family;
+  font-size: $base-font-size;
+  overflow-x: hidden;
+  color: $main-color;
+  padding: 1em;
+  text-align: center;
+  font-weight: 600;
+}
+
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/* text styles */
+h1 {
+  font-size: clamp(0.9rem, 1.5rem, 1.5rem);
+  font-weight: 500;
+}
+
+h2 {
+  font-size: clamp(0.8rem, 1.1rem, 1.1rem);
+  font-weight: 700;
+  margin: 0;
+}
+
+p {
+  color: $gray-color;
+  margin: 0;
+}
+
+/* genetic class text styles */
+.text-center {
+  text-align: center;
+}
+
+/* image styles */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* main styles */
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+
+  img {
+    border-radius: $radius;
+  }
+}
+
+/* footer styles */
+footer {
+  margin-top: 1em;
+}
+
+/*---------------------- LAYOUT ----------------------*/
+/* display styles */
+.d-none {
+  display: none !important;
+}
+
+.d-mobile-none {
+  @include breakpoint(xsm) {
+    display: none !important;
+  }
+}
+
+.d-tablet-none {
+  @include breakpoint(sm) {
+    display: none !important;
+  }
+}
+
+.d-block {
+  display: block !important;
+}
+
+/* wrapper styles */
+.wrapper-900 {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* flex styles */
+.flex {
+  display: flex;
+  gap: 1em;
+}
+
+/* grid styles */
+.grid {
+  display: grid;
+  grid-gap: 1em;
+}
+
+.col-1 {
+  grid-template-columns: 1fr;
+}
+
+.col-2 {
+  @extend .col-1;
+
+  @include breakpoint(sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.span-2 {
+  grid-column: span 2;
+}
+
+.span-down-2 {
+  grid-row: span 2;
+}
+
+/*---------------------- COMPONENTS ----------------------*/
+/* profile styles */
+.profile-img {
+  width: 156px;
+  height: 156px;
+  border-radius: $radius;
+}
+
+/* stats styles */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 400px;
+  margin: 1.5em auto;
+  margin-bottom: 3.5em;
+  column-gap: 1em;
+  justify-content: center;
+
+  & > div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: $light-gray-color;
+    width: clamp(78px, 80px, 100px);
+    height: clamp(52px, 60px, 67px);
+    padding: 0.5em 1em;
+    border-radius: $radius;
+  }
+}
+
+/* credit styles */
+.credits p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: $credits-color;
+}
+
+.credits a:link,
+.credits a:visited {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: $credits-color;
+}
+
+.credits a:hover,
+.credits a:active {
+  text-decoration: none;
+}

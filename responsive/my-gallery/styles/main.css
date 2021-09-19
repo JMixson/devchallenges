@@ -1,0 +1,205 @@
+/*---------------------- VARIABLES ----------------------*/
+/* colors */
+/* fonts */
+/* base sizes */
+/* border-radius size */
+/*---------------------- MIXINS ----------------------*/
+/* media query mixin */
+/*---------------------- HTML, ALL, BODY STYLES ----------------------*/
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(0.9rem, 1rem, 1.5rem);
+  overflow-x: hidden;
+  color: #4e5150;
+  padding: 1em;
+  text-align: center;
+  font-weight: 600;
+}
+
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/* text styles */
+h1 {
+  font-size: clamp(0.9rem, 1.5rem, 1.5rem);
+  font-weight: 500;
+}
+
+h2 {
+  font-size: clamp(0.8rem, 1.1rem, 1.1rem);
+  font-weight: 700;
+  margin: 0;
+}
+
+p {
+  color: #a9a9a9;
+  margin: 0;
+}
+
+/* genetic class text styles */
+.text-center {
+  text-align: center;
+}
+
+/* image styles */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* main styles */
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+}
+
+main img {
+  border-radius: 12px;
+}
+
+/* footer styles */
+footer {
+  margin-top: 1em;
+}
+
+/*---------------------- LAYOUT ----------------------*/
+/* display styles */
+.d-none {
+  display: none !important;
+}
+
+@media (max-width: 600px) {
+  .d-mobile-none {
+    display: none !important;
+  }
+}
+
+@media (min-width: 600px) {
+  .d-tablet-none {
+    display: none !important;
+  }
+}
+
+.d-block {
+  display: block !important;
+}
+
+/* wrapper styles */
+.wrapper-900 {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* flex styles */
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1em;
+}
+
+/* grid styles */
+.grid {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1em;
+}
+
+.col-1, .col-2 {
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+@media (min-width: 600px) {
+  .col-2 {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.span-2 {
+  grid-column: span 2;
+}
+
+.span-down-2 {
+  grid-row: span 2;
+}
+
+/*---------------------- COMPONENTS ----------------------*/
+/* profile styles */
+.profile-img {
+  width: 156px;
+  height: 156px;
+  border-radius: 12px;
+}
+
+/* stats styles */
+.stats {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  max-width: 400px;
+  margin: 1.5em auto;
+  margin-bottom: 3.5em;
+  -webkit-column-gap: 1em;
+          column-gap: 1em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.stats > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #e5e5e5;
+  width: clamp(78px, 80px, 100px);
+  height: clamp(52px, 60px, 67px);
+  padding: 0.5em 1em;
+  border-radius: 12px;
+}
+
+/* credit styles */
+.credits p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #b9bdcf;
+}
+
+.credits a:link,
+.credits a:visited {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: #b9bdcf;
+}
+
+.credits a:hover,
+.credits a:active {
+  text-decoration: none;
+}
+/*# sourceMappingURL=main.css.map */
