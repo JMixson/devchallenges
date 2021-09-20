@@ -127,6 +127,14 @@ button {
   border: none;
 }
 
+/* header styles */
+header {
+  @include breakpoint(sm) {
+    grid-column: span 4;
+    order: 1;
+  }
+}
+
 /* aside styles */
 aside {
   display: grid;
@@ -143,6 +151,7 @@ aside {
     padding: 1.5em 1em;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    order: 3;
   }
 
   & > div {
@@ -160,9 +169,33 @@ aside {
 /* main styles */
 main {
   max-width: 900px;
+
+  @include breakpoint(sm) {
+    grid-column: span 3;
+    order: 2;
+  }
+}
+
+/* footer styles */
+footer {
+  @include breakpoint(sm) {
+    grid-column: span 4;
+    order: 4;
+  }
 }
 
 /*---------------------- LAYOUT ----------------------*/
+/* container styles */
+.container {
+  display: grid;
+
+  @include breakpoint(sm) {
+    grid-template-columns: repeat(4, 1fr);
+    align-items: flex-start;
+    column-gap: 1.5em;
+  }
+}
+
 /* display styles */
 .d-none {
   display: none !important;
@@ -185,8 +218,8 @@ main {
 }
 
 /* wrapper styles */
-.wrapper-1200 {
-  max-width: 1200px;
+.wrapper-970 {
+  max-width: 970px;
   margin: 0 auto;
 }
 
@@ -260,6 +293,7 @@ input[type="checkbox"] {
   font-size: minmax(0.8rem, 0.9rem);
   font-style: italic;
   font-weight: 500;
+  max-width: 600px;
 
   img {
     margin-top: 5px;
