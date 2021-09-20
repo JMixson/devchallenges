@@ -16,7 +16,7 @@ body {
 }
 
 body {
-  font-size: minmax(1rem, 1rem);
+  font-size: 1rem;
   font-family: "Montserrat", sans-serif;
   overflow-x: hidden;
   color: #333333;
@@ -38,11 +38,11 @@ h2 {
 }
 
 h1 {
-  font-size: minmax(1.5rem, 3rem);
+  font-size: clamp(1.5rem, 1.7rem, 3rem);
 }
 
 h2 {
-  font-size: minmax(1.1rem, 1.5rem);
+  font-size: clamp(1.1rem, 1.3rem, 1.5rem);
 }
 
 /* genetic class text styles */
@@ -57,7 +57,7 @@ h2 {
 .small {
   color: #bdbdbd;
   font-weight: 700;
-  font-size: 0.5rem;
+  font-size: clamp(0.5rem, 0.5rem, 0.6rem);
   text-transform: uppercase;
 }
 
@@ -267,7 +267,7 @@ fieldset div {
 }
 
 legend {
-  font-size: minmax(1rem, 1.1rem);
+  font-size: clamp(1rem, 1rem 1.1rem);
   font-family: "Playfair Display", serif;
   font-style: italic;
   margin: 1em 0;
@@ -286,7 +286,7 @@ input[type="checkbox"] {
   display: grid;
   -ms-grid-columns: 20px 1fr;
       grid-template-columns: 20px 1fr;
-  font-size: minmax(0.8rem, 0.9rem);
+  font-size: clamp(0.8rem, 0.8rem, 0.9rem);
   font-style: italic;
   font-weight: 500;
   max-width: 600px;

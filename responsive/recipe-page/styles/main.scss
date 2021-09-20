@@ -12,7 +12,7 @@ $main-font-family: "Montserrat", sans-serif;
 $special-font-family: "Playfair Display", serif;
 
 /* base sizes */
-$base-font-size: minmax(1rem, 1rem);
+$base-font-size: 1rem;
 
 /*---------------------- MIXINS ----------------------*/
 /* media query mixin */
@@ -80,11 +80,11 @@ h2 {
 }
 
 h1 {
-  font-size: minmax(1.5rem, 3rem);
+  font-size: clamp(1.5rem, 1.7rem, 3rem);
 }
 
 h2 {
-  font-size: minmax(1.1rem, 1.5rem);
+  font-size: clamp(1.1rem, 1.3rem, 1.5rem);
 }
 
 /* genetic class text styles */
@@ -99,8 +99,7 @@ h2 {
 .small {
   color: $light-gray-color;
   font-weight: 700;
-  // font-size: minmax(0.5rem, 0.6rem);
-  font-size: 0.5rem;
+  font-size: clamp(0.5rem, 0.5rem, 0.6rem);
   text-transform: uppercase;
 }
 
@@ -273,7 +272,7 @@ fieldset {
 }
 
 legend {
-  font-size: minmax(1rem, 1.1rem);
+  font-size: clamp(1rem, 1rem 1.1rem);
   font-family: $special-font-family;
   font-style: italic;
   margin: 1em 0;
@@ -290,7 +289,7 @@ input[type="checkbox"] {
 .description {
   display: grid;
   grid-template-columns: 20px 1fr;
-  font-size: minmax(0.8rem, 0.9rem);
+  font-size: clamp(0.8rem, 0.8rem, 0.9rem);
   font-style: italic;
   font-weight: 500;
   max-width: 600px;
