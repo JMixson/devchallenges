@@ -1,6 +1,6 @@
-# devchallenges
+# DevChallenges
 
-Challenges from devChallenges.
+Challenges from [DevChallenges](https://devchallenges.io/).
 
 ## Completed Challenges
 
